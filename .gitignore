@@ -176,3 +176,7 @@ outputs/
 *.urdf
 *.xml
 *.part
+
+act_last_model.zip
+
+lerobot_yeahbot_dataset_cube.zip
