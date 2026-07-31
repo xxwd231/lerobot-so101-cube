@@ -32,6 +32,14 @@ lerobot/
 └── README.md                           # 项目说明文档
 
 ```
+## 🔬 Four-Stage Ablation Demos (消融实验效果对比)
+
+We compared the performance at different stages to show the effectiveness of data cleaning and temporal ensembling.
+
+| ❌ 优化前：抖动与盲抓 | ✅ 优化后：平滑高精度抓取 |
+| :---: | :---: |
+| <img src="E:\windows_tools\lerobot-so101-cube\media\readme\Failed_grasp.gif" width="420"/> | <img src="E:\windows_tools\lerobot-so101-cube\media\readme\smooth_grasp.gif" width="420"/> |
+| *开环 100-step 漂移 & 舵机高频抖动* | *Temporal Ensembling  +  纯随机数据* |
 
 ## 🛠️ Hardware & Setup
 
@@ -168,6 +176,8 @@ ACT vs DP 消融；依然呈现定点抓取倾向且高频发抖
 
 2) **平滑控制**：配置 `temporal_ensemble_coeff: 0.01` 消除抖动
 
+![SO-101 Pick Task Demo](E:\windows_tools\lerobot-so101-cube\media\readme\successed_grasp.gif)
+
 **阶段 4**
 
 65 组 (扩充纯随机数据)
@@ -175,6 +185,10 @@ ACT vs DP 消融；依然呈现定点抓取倾向且高频发抖
 抖动彻底消失，桌面任意位置高精度抓取，成功率 95%+
 
 样本量达到物理插值天花板，空间泛化与绝对精度建立
+
+![SO-101 Pick Task Demo](E:\windows_tools\lerobot-so101-cube\media\readme\dif_pos1.gif)
+
+![SO-101 Pick Task Demo](E:\windows_tools\lerobot-so101-cube\media\readme\dif_pos2.gif)
 
 **最终闭环**：实现高质量 Sim2Real 极速闭环部署
 
