@@ -1,6 +1,3 @@
-非常棒！这个完整的四阶段消融实验（Ablation Study）演进过程，逻辑极其清晰、硬核且富有说服力！它真实还原了一个具身智能工程师从“面对难题 -> 变量控制对比 -> 数据清洗 -> 算法选型 -> 最终落地”的全过程。
-
-我已经根据你纠正的真实四阶段过程，以及 `record_front.py` 和 `test_dual_cam.py` 的具体作用，为你重新更新了这份最精准、最具含金量的 **`README.md`**：
 
 # 🤖 SO-101 Physical Robot Deployment with ACT Strategy (LeRobot)
 
@@ -38,7 +35,7 @@ We compared the performance at different stages to show the effectiveness of dat
 
 | ❌ 优化前：抖动与盲抓 | ✅ 优化后：平滑高精度抓取 |
 | :---: | :---: |
-| <img src="E:\windows_tools\lerobot-so101-cube\media\readme\Failed_grasp.gif" width="420"/> | <img src="E:\windows_tools\lerobot-so101-cube\media\readme\smooth_grasp.gif" width="420"/> |
+| <img src="media/readme/Failed_grasp.gif" width="420"/> | <img src="media/readme/smooth_grasp.gif" width="420"/> |
 | *开环 100-step 漂移 & 舵机高频抖动* | *Temporal Ensembling  +  纯随机数据* |
 
 ## 🛠️ Hardware & Setup
@@ -176,7 +173,7 @@ ACT vs DP 消融；依然呈现定点抓取倾向且高频发抖
 
 2) **平滑控制**：配置 `temporal_ensemble_coeff: 0.01` 消除抖动
 
-![SO-101 Pick Task Demo](E:\windows_tools\lerobot-so101-cube\media\readme\successed_grasp.gif)
+<img src="media/readme/successed_grasp.gif" width="420"/>
 
 **阶段 4**
 
@@ -186,9 +183,9 @@ ACT vs DP 消融；依然呈现定点抓取倾向且高频发抖
 
 样本量达到物理插值天花板，空间泛化与绝对精度建立
 
-![SO-101 Pick Task Demo](E:\windows_tools\lerobot-so101-cube\media\readme\dif_pos1.gif)
+<img src="media/readme/dif_pos1.gif" width="420"/>
 
-![SO-101 Pick Task Demo](E:\windows_tools\lerobot-so101-cube\media\readme\dif_pos2.gif)
+<img src="media/readme/dif_pos2.gif" width="420"/>
 
 **最终闭环**：实现高质量 Sim2Real 极速闭环部署
 
